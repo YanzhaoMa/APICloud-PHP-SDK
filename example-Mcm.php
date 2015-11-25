@@ -50,17 +50,6 @@ class example_Mcm {
     }
 
     /**
-     * File对象操作
-     */
-    public function mcm_addFile(){  //上传文件
-        $post_data = array(
-            'file' => '/Users/suker/img.jpg'
-        );
-        $mcm = new McmModel();
-        $mcm->objAddFile($post_data);
-    }
-
-    /**
      * Relation对象操作
      */
     public function relationGet(){  //获取关联对象
@@ -143,13 +132,13 @@ class example_Mcm {
     }
     public function userExist(){    //判断用户是否存在
         $mcm = new McmModel();
-        $id='56532642469b94545b5d8976';
+        $id='5653c29583e2ee6a5b74d4b3';
         $mcm->userExist($id);
     }
     public function userPut(){ //更改用户信息
         $mcm = new McmModel();
-        $id='56532642469b94545b5d8976';
-        $data['age']='30';
+        $id='5653c29583e2ee6a5b74d4b3';
+        $data['age']='33';
         $mcm->userPut($id,$data);
     }
     public function userDel(){ //删除用户
@@ -200,9 +189,13 @@ class example_Mcm {
         $mcm->roleDelete($id);
     }
 }
-	$ex= new example_Mcm();
-    $ex->mcm_addFile();  //上传文件
-	//$ex->mcm_get(); //获取对象ById
-	// $ex->countyun(); //统计安装数据
+
+	$ex=new example_Mcm();
+
+	$ex->mcm_get(); //获取对象ById
+    $ex->mcm_count(); //获取product对象数量
+    $ex->userExist(); //查看用户是否存在ById
+    $ex->userPut();  //修改用户信息
+	
 
 ?>

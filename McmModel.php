@@ -38,12 +38,6 @@ class McmModel extends ApicloudModel{
 		return $this->exists(self::SERVERAPIURL.'mcm/api/'.$name.'/'.$id.'/exists');
 	}
 	
-	/**
-	 * File对象操作
-	 */
-	function objAddFile($obj){
-		return $this->post(self::SERVERAPIURL.'mcm/api/file',$obj);
-	}
 
 	/**
 	 * Relation对象操作
@@ -92,7 +86,7 @@ class McmModel extends ApicloudModel{
 	}
 	function userGet($id) //获取用户
 	{
-		return $this->objGet('user',$id);
+		return $this->get(self::SERVERAPIURL.'mcm/api/user',$id);
 	}
 	function userCount($filter){  //获取所有用户数量:json(可连接参数:fields,where,limit,skip,order,include,includefilter)
 		return $this->get(self::SERVERAPIURL.'mcm/api/user/count?filter='.$filter);
@@ -101,15 +95,15 @@ class McmModel extends ApicloudModel{
 		return $this->get(self::SERVERAPIURL.'mcm/api/user?filter='.$filter);
 	}
 	function userExist($id){ //判断用户是否存在ById
-		return $this->objGet('user',$id.'/exists');
+		return $this->exists(self::SERVERAPIURL.'mcm/api/user/'.$id.'/exists');
 	}
 	function userPut($id,$objarray) //更改用户信息
 	{
-		return $this->objPut('user',$id,$objarray);
+		return $this->put(self::SERVERAPIURL.'mcm/api/user/'.$id,$objarray);
 	}
 	function userDel($id) //删除用户-需要开启user表的删除权限
 	{
-		return $this->objDelete('user',$id);
+		return $this->Delete(self::SERVERAPIURL.'mcm/api/user',$id);
 	}
 
  

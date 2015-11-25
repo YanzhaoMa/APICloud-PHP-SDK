@@ -17,7 +17,7 @@ class ApicloudModel extends Http {
     	$now = time();
 		$this->httpheader = array(
             "X-APICloud-AppId: ".$this->appid,
-            "X-APICloud-AppKey: ".sha1($this->appid."UZ".$this->appkey."UZ".$now).".".$now 
+            "X-APICloud-AppKey: ".sha1($this->appid."UZ".$this->appkey."UZ".$now).".".$now
         );
 	}
 }
