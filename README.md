@@ -28,7 +28,8 @@ class example_Count {
 }
 
 class example_File {
-    /**
+    
+    /*
      * File对象操作
      */
     public function mcm_addFile($tmpname,$tmpfile,$tmpType){  //上传文件 
