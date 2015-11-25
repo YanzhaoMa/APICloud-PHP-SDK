@@ -1,36 +1,11 @@
-# APICloud-PHP-SDK
-APICloud-PHP-SDK 是基于PHP开发的云API交互SDK，可以方便的与APICloud的数据云进行交互，完成数据云API，统计云API，推送运API的功能。
-
-class PushModel_Count {
-
-    /**
-    *   推送后台接口测试
-    */
-    public function pushyun(){
-        $push= new PushModel();
-        $push->sendMsg();
-    }
-}
-
-class example_Count {
-
-	/**
-    *   统计后台接口测试
-    */
-    public function countyun(){  //统计云接口数据
-        $count = new CountModel();
-        $qdate="2015-11-18";
-        $tdate="2015-11-25";
-        $count->getcountdata($qdate,$tdate);
-
-    }
-}
-
+<?php
+require('McmModel.php');
 class example_Mcm {
+
 
 	/**
     *   数据云后台接口测试
-    */
+    **/
     public function mcm_add(){  //创建对象
         $mcm = new McmModel();
         $name='product';
@@ -213,4 +188,9 @@ class example_Mcm {
         $id='56540d3ca3b9ab451c6b0481';
         $mcm->roleDelete($id);
     }
-}# APICloud-PHP-SDK
+}
+	$ex= new example_Mcm();
+	$ex->mcm_get(); //获取对象ById
+	// $ex->countyun(); //统计安装数据
+
+?>
