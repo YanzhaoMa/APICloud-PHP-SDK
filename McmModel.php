@@ -39,6 +39,13 @@ class McmModel extends ApicloudModel{
 	}
 	
 	/**
+	 * File对象操作
+	 */
+	function objAddFile($obj){
+		return $this->post(self::SERVERAPIURL.'mcm/api/file',$obj);
+	}
+
+	/**
 	 * Relation对象操作
 	 */
 	function relationGet($name,$id,$relationName){  //获取关联对象

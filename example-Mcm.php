@@ -50,6 +50,17 @@ class example_Mcm {
     }
 
     /**
+     * File对象操作
+     */
+    public function mcm_addFile(){  //上传文件
+        $post_data = array(
+            'file' => '/Users/suker/img.jpg'
+        );
+        $mcm = new McmModel();
+        $mcm->objAddFile($post_data);
+    }
+
+    /**
      * Relation对象操作
      */
     public function relationGet(){  //获取关联对象
@@ -190,7 +201,8 @@ class example_Mcm {
     }
 }
 	$ex= new example_Mcm();
-	$ex->mcm_get(); //获取对象ById
+    $ex->mcm_addFile();  //上传文件
+	//$ex->mcm_get(); //获取对象ById
 	// $ex->countyun(); //统计安装数据
 
 ?>
