@@ -1,7 +1,7 @@
 # APICloud-PHP-SDK
 APICloud-PHP-SDK 是基于PHP开发的云API交互SDK，可以方便的与APICloud的数据云进行交互，完成数据云API，统计云API，推送运API的功能。
 
-class PushModel_Count {
+class example_Count {
 
     /**
     *   推送后台接口测试
