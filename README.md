@@ -256,7 +256,7 @@ class example_Mcm {
         $mcm->roleDelete($id);
     }
 }
-```php
+```
 
 
 # APICloud-PHP-SDK
