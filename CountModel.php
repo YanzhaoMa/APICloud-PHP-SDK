@@ -10,7 +10,7 @@ class CountModel extends ApicloudModel{
     }
 
 	function Go($startDate,$endDate){
-		$url = "https://p.apicloud.com/analytics/getAppStatisticDataById";
+		$url = "https://r.apicloud.com/analytics/getAppStatisticDataById";
     	$body = "startDate=$startDate&endDate=$endDate";
     	
     	return $this->post($url,$body);
